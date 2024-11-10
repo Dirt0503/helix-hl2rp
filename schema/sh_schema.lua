@@ -38,6 +38,10 @@ function Schema:IsCombineRank(text, rank)
 	return string.find(text, "[%D+]"..rank.."[%D+]")
 end
 
+function Schema:IsConscriptRank(text, rank)
+	return string.find(text, rank .. "[%D+]")
+end
+
 do
 	local CLASS = {}
 	CLASS.color = Color(150, 100, 100)
