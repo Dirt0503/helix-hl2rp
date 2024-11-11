@@ -34,7 +34,6 @@ function FACTION:OnNameChanged(client, oldValue, value)
 		character:SetModel("models/policetrench.mdl")
 	elseif (!Schema:IsCombineRank(oldValue, "EpU") and Schema:IsCombineRank(value, "EpU")) then
 		character:JoinClass(CLASS_EMP)
-
 		character:SetModel("models/leet_police2.mdl")
 	elseif (!Schema:IsCombineRank(oldValue, "DvL") and Schema:IsCombineRank(value, "DvL")) then
 		character:SetModel("models/eliteshockcp.mdl")
@@ -43,10 +42,12 @@ function FACTION:OnNameChanged(client, oldValue, value)
 	elseif (!Schema:IsCombineRank(oldValue, "SCN") and Schema:IsCombineRank(value, "SCN")
 	or !Schema:IsCombineRank(oldValue, "SHIELD") and Schema:IsCombineRank(value, "SHIELD")) then
 		character:JoinClass(CLASS_MPS)
-	end
-
-	if (!Schema:IsCombineRank(oldValue, "GHOST") and Schema:IsCombineRank(value, "GHOST")) then
+	elseif (!Schema:IsCombineRank(oldValue, "GHOST") and Schema:IsCombineRank(value, "GHOST")) then
 		character:SetModel("models/eliteghostcp.mdl")
+	elseif (!Schema:IsCombineRank(oldValue, "HELIX") and Schema:IsCombineRank(value, "HELIX")) then
+		character:JoinClass(CLASS_MPM)
+	elseif (!Schema:IsCombineRank(oldValue, "GRID") and Schema:IsCombineRank(value, "GRID")) then
+		character:JoinClass(CLASS_MPE)
 	end
 end
 
