@@ -5,5 +5,5 @@ CLASS.isDefault = false
 CLASS_CRFL = CLASS.index
 
 function CLASS:OnSpawn(client)
-	client:Give("weapon_smg1")
+	client:Give("weapon_conscript_smg")
 end

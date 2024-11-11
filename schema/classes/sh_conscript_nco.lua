@@ -6,18 +6,6 @@ CLASS_CNCO = CLASS.index
 
 function CLASS:OnSpawn(client)
     --weapon
-	client:Give("weapon_smg1")
-    client:Give("weapon_pistol")
-
-    --ammo
-    client:Give("item_ammo_smg1")
-    client:Give("item_ammo_smg1")
-    client:Give("item_ammo_smg1")
-    client:Give("item_ammo_smg1")
-    client:Give("item_ammo_smg1")
-    client:Give("item_ammo_smg1")
-    client:Give("item_ammo_pistol")
-    client:Give("item_ammo_pistol")
-    client:Give("item_ammo_pistol")
-    client:Give("item_ammo_pistol")
+	client:Give("weapon_conscript_smg")
+    client:Give("weapon_conscript_pistol")
 end
