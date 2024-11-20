@@ -7,8 +7,4 @@ function CLASS:OnSpawn(client)
 	client:Give("weapon_conscript_smg")
 end
 
-function CLASS:OnSet(client)
-	client:Give("weapon_conscript_smg")
-end
-
 CLASS_MPM = CLASS.index

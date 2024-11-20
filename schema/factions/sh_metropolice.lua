@@ -51,4 +51,20 @@ function FACTION:OnNameChanged(client, oldValue, value)
 	end
 end
 
+function FACTION:OnSpawn(client)
+	local character = client:GetCharacter()
+    local name = character:GetName()
+
+    -- Match names starting with the rank prefixes and then followed by any non-digit characters
+    if string.match(name, "HELIX") then
+		character:JoinClass(CLASS_MPM)
+
+    elseif string.match(name, "GRID") then
+		character:JoinClass(CLASS_MPE)
+
+    else
+        return
+    end
+end
+
 FACTION_MPF = FACTION.index
